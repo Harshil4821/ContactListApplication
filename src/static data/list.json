@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Mike Huston",
+        "email": "mikehuston01@gmail.com",
+        "company": "Estra Boutique Ltd.",
+        "designation": "Product Manager",
+        "phone": "9823845876",
+        "address": "",
+        "background": "#4e09ad"
+    },
+    {
+        "name": "Amazonia",
+        "email": "amazonia01@gmail.com",
+        "company": "Amazon",
+        "designation": "Software Developer",
+        "phone": "9952338440",
+        "address": "",
+        "background": "#146926"
+    },
+    {
+        "name": "Ronnie RR",
+        "email": "ronnie01@gmail.com",
+        "company": "",
+        "designation": "",
+        "phone": "8200636481",
+        "address": "",
+        "background": "#1ab344"
+    },
+    {
+        "name": "Robert Mike",
+        "email": "robert01@gmail.com",
+        "company": "Tulips India Pvt. Ltd.",
+        "designation": "Quality Analyst",
+        "phone": "9166204487",
+        "address": "",
+        "background": "#3bcbdd"
+    },
+    {
+        "name": "Roky",
+        "email": "roky12@gmail.com",
+        "company": "Start Company",
+        "designation": "Front-End Engineer",
+        "phone": "7715993266",
+        "address": "",
+        "background": "#187695"
+    },
+    {
+        "name": "Joey Clause",
+        "email": "joeyclause01@gmail.com",
+        "company": "",
+        "designation": "",
+        "phone": "8845999201",
+        "address": "",
+        "background": "#46fb99"
+    },
+    {
+        "name": "James Smith",
+        "email": "james01@gmail.com",
+        "company": "Torreko Pvt. Ltd.",
+        "designation": "Front-End Developer",
+        "phone": "9632015448",
+        "address": "",
+        "background": "#5ec127"
+    },
+    {
+        "name": "John",
+        "email": "john23@gmail.com",
+        "company": "",
+        "designation": "",
+        "phone": "8884530299",
+        "address": "",
+        "background": "#44c1af"
+    },
+    {
+        "name": "Micheal Smith",
+        "email": "micheal2@gmail.com",
+        "company": "",
+        "designation": "",
+        "phone": "",
+        "address": "",
+        "background": "#24cba5"
+    },
+    {
+        "name": "David Watson",
+        "email": "davidwatson2@gmail.com",
+        "company": "Lecent Pvt. Ltd.",
+        "designation": "Back-End Developer",
+        "phone": "8856214999",
+        "address": "",
+        "background": "#0f6169"
+    }
+]

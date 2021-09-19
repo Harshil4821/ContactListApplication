@@ -1,0 +1,183 @@
+.home_left{
+    width: 47.5%;
+    margin-left: 3%;
+    min-height: 100vh;
+}
+.home_left .header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5%;
+}
+.home_left .header svg{
+    font-size: 30px;
+    fill: #e74c3c;
+}
+.home_left .header .content{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-left: 10px;
+}
+.home_left .header .content h1{
+    font-size: 30px;
+    color: #000;
+}
+.home_left .header .content p{
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 0;
+}
+.home_left .search_add_box{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 10%;
+}
+.home_left .search_add_box #search_bar{
+    border-radius: 30px;
+    font-size: 16px;
+}
+.home_left .search_add_box .search_bar,
+.home_left .search_add_box .search_bar input{
+    border-radius: 30px;
+    height: 40px;
+}
+.home_left .search_add_box .search_bar input{
+    padding: 0;
+    padding-left: 15px;
+    font-size: 16px;
+}
+.home_left .search_add_box .css-f6v4u4-MuiInputBase-root-MuiFilledInput-root::before,
+.home_left .search_add_box .css-f6v4u4-MuiInputBase-root-MuiFilledInput-root::after{
+    border: none !important;
+    border: 0 im !important;
+}
+.home_left .search_add_box .add_contact_button{
+    background: linear-gradient(45deg, #e74c3c, #e67e22, #f39c12);
+    z-index: -1 !important;
+    color: #fff;
+    margin: 0 10px;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+.home_left .contact_list{
+    margin: 5% 10%;
+}
+.home_left .contact_list .box{
+    width: 100%;
+    height: auto;
+}
+.home_left .contact_list .box .list_header{
+    background: rgba(0, 0, 0, 0.06);
+    padding: 5px;
+}
+.home_left .contact_list .box .list_header .list_header_text{
+    font-size: 22px;
+}
+.home_left .contact_list .box .list_detail{
+    width: 100%;
+    padding: 5px;
+}
+.home_left .contact_list .box .list_detail .user_list_detail{
+    margin: 10px 0;
+    padding: 5px 0;
+    width: 100%;
+}
+.home_left .contact_list .box .list_detail .user_list_detail:hover{
+    background:rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+}
+@media screen and (max-width: 992px){
+    .main_list{
+        flex-direction: column;
+    }
+    .home_left{
+        margin-top: 60px;
+        margin-left: 0;
+        width: 95%;
+    }
+    .home_left .search_add_box .add_contact_button{
+        min-width: 50px;
+        width: auto;
+        margin: 00;
+        margin-left: 10px;
+    }
+    .home_left .search_add_box{
+        margin-left: 5%;
+    }
+    .home_left .contact_list{
+        margin: 5% 0 ;
+        margin-left: 5%;
+        max-height: 100vh;
+        overflow-y: scroll;
+    }
+    .home_left .contact_list .user_list_detail .col-6 .d-flex .user_name, 
+    .home_left .contact_list .user_list_detail .col-6 .user_company{
+        font-size: 20px;
+    }
+    .home_left .contact_list .user_list_detail .col-6:nth-child(odd){
+        padding-left: 30px;
+    }
+    .home_left .contact_list .user_list_detail .col-6:nth-child(even){
+        align-items: flex-start !important;
+    }
+}
+@media screen and (max-width: 576px){
+    .home_left .contact_list .user_list_detail .col-6 .d-flex .user_name, 
+    .home_left .contact_list .user_list_detail .col-sm-6 .user_company{
+        font-size: 17px;
+    }   
+    .home_left .contact_list .user_list_detail .col-6 .d-flex .user_email{
+        font-size: 15px !important;
+    }
+    .home_left .search_add_box {
+        margin-left: 2.5%;
+    }
+    .home_left .search_add_box{
+        margin: 0 2%;
+    }
+}
+@media screen and (max-width: 450px){
+    .home_left .search_add_box{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0;
+    }
+    .home_left .search_add_box .search_bar{
+        margin: 10px;
+        margin-right: auto;
+    }
+    .home_left .search_add_box .add_contact_button{
+        margin: 10px 20px;
+        margin-right: auto;
+    }
+    .home_left .contact_list .box{
+        background: linear-gradient(45deg, #e74c3c, #e67e22, #f39c12);
+    }
+    .home_left .contact_list .box .list_header{
+        display: none;
+    }
+    .home_left .contact_list .box .list_detail .user_list_detail{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 10px 11px;
+    }
+    .home_left .contact_list .box .list_detail .user_list_detail:hover{
+        background: #fff;
+    }
+    .home_left .contact_list .user_list_detail .col-6 .d-flex .user_name, 
+    .home_left .contact_list .user_list_detail .col-6 .user_company{
+        width: 100%;
+    }   
+    .home_left .contact_list .user_list_detail .col-6 .d-flex .user_email{
+        width: 100%;
+    }
+    .home_left .contact_list .user_list_detail .col-6{
+        width: 100%;
+        padding: 0;
+    }
+}
