@@ -10,6 +10,11 @@ import HomeRight from '../home right/index';
 import AddContact from '../add contact/index';
 
 const HomeLeft = ()=>{
+
+    const [main_contact_list, setMainContactList] = useState(ContactList);
+    console.log("Printing main contact list", main_contact_list);
+
+
     const [text_search, setSearchText] = useState(null);
     const [SearchArray, setSearchArray] = useState([]);
     const [user_detail, setUserDetail] = useState(null);
@@ -21,7 +26,7 @@ const HomeLeft = ()=>{
         if(e.target.value === ""){
             setSearchArray([]);
         }
-        ContactList.map((obj,i)=>{
+        main_contact_list.map((obj,i)=>{
 
             if(obj.name.includes(e.target.value) ){
                 if(SearchArray.indexOf(obj) === -1){
@@ -39,7 +44,7 @@ const HomeLeft = ()=>{
         })
         setSearchText(e.target.value)
     }
-    console.log(ContactList, SearchArray);
+    console.log(main_contact_list, SearchArray);
 
     const ChangeAddContactFlag = ()=>{
         setAddContactFlag(true)
@@ -49,7 +54,7 @@ const HomeLeft = ()=>{
     
     return (
         <>
-            {add_contact_flag && <AddContact open={add_contact_flag} close={()=>{
+            {add_contact_flag && <AddContact setMainContactList={setMainContactList} main_contact_list={main_contact_list} open={add_contact_flag} close={()=>{
                 setAddContactFlag(false);
             }} />}
             <div className="d-flex flex-row flex-wrap main_list">
@@ -95,7 +100,7 @@ const HomeLeft = ()=>{
                             <div className="row list_detail">
                                 {
                                     text_search === null || text_search === "" ? 
-                                    ContactList.map((value, i)=>{
+                                    main_contact_list.map((value, i)=>{
                                         return (
                                             <>
                                                 <div onClick={()=>{
@@ -147,7 +152,7 @@ const HomeLeft = ()=>{
                         </div>
                     </div>
                 </div>
-                {user_detail!==null && <HomeRight user_detail={user_detail} />}
+                {user_detail!==null && <HomeRight setMainContactList={setMainContactList} main_contact_list={main_contact_list} user_detail={user_detail} />}
             </div>
         </>
     )

@@ -52,7 +52,6 @@
         align-items: center;
     }
     .home_right .box_right{
-        z-index: -1;
         max-width: 80%;
         min-width: 80%;
         margin: 0;
@@ -80,7 +79,4 @@
     .home_right .box_right .content .row .col-sm-8 h4{
         margin-left: 10px;
     }
-}
-@media screen and (max-width: 400px){
-
 }

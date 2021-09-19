@@ -10,13 +10,13 @@ const HomeRight = (props)=>{
     let value = props?.user_detail;
     const [edit_contact_flag, setEditContactFlag] = React.useState(false);
     const ChangeEditContactFlag = ()=>{
-        alert("hel")
         setEditContactFlag(true);
-        alert("hello");
     }
     return (
         <>
-            {edit_contact_flag && <EditContact open={true} close={()=>{
+            {edit_contact_flag && <EditContact setMainContactList={props.setMainContactList} main_contact_list={props.main_contact_list} open={true} close={(main_contact_list)=>{
+                console.log("Printing main contact list in home right", main_contact_list);
+                props.setMainContactList(main_contact_list);
                 setEditContactFlag(false)
             }} user_detail={value} />}
             <div className="home_right">
@@ -75,7 +75,7 @@ const HomeRight = (props)=>{
                     <div className="edit_content">
                         <Button onClick={()=>{
                             ChangeEditContactFlag()
-                        }} style={{background: 'linear-gradient(45deg, #e74c3c, #e67e22, #f39c12)', color: '#fff'}}>Edit</Button>
+                        }} style={{background: 'linear-gradient(45deg, #e74c3c, #e67e22, #f39c12)', color: '#fff', cursor: 'pointer'}}>Edit</Button>
                     </div>
                 </div>
             </div>

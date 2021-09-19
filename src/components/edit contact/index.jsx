@@ -29,11 +29,34 @@ const EditContact = (props)=>{
             const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             if(re.test(user_detail.email)){
                     // ContactDetail.push(user_detail);
-                    let index = ContactDetail.indexOf(props?.user_detail);
-                    ContactDetail.splice(index, 1);
-                    ContactDetail.splice(index, 0, user_detail);
-                    console.log(ContactDetail);
-                    props.close();
+                    // console.log("Validation completed", user_detail);
+                    // let index = ContactDetail.indexOf(props?.user_detail);
+                    // ContactDetail.splice(index, 1);
+                    // ContactDetail.splice(index, 0, user_detail);
+                    // console.log(ContactDetail);
+                    // console.log("coming data",props.user_detail);
+                    // console.log("updated data", user_detail);
+                    let index = -1;
+                    ContactDetail.map((user_detail_obj, i)=>{
+                        if(user_detail_obj.email === props.user_detail.email){
+                            // console.log("Condition matched", user_detail_obj, props);
+                            index = i;
+                        }
+                    })
+                    if(index !== -1){
+                        console.log("Condition is matched and index is",index);
+                        props.main_contact_list.splice(index, 0);
+                        console.log(props.main_contact_list.splice(index, 0));
+                        props.main_contact_list.splice(index, 1, user_detail);
+                        console.log(props.main_contact_list.splice(index, 1, user_detail));
+                        console.log(props.main_contact_list);
+                        props.setMainContactList(props.main_contact_list);
+                    }
+                    // ContactDetail[index].email = user_detail.email;
+                    // ContactDetail = ContactDetailupdated;
+                    // console.log(ContactDetail);
+                    // console.log("printing updae", ContactDetailupdated);
+                    props.close(props.main_contact_list);
             }
             else{
                 setErrorMsg("Please provide valid email address.");
