@@ -1,0 +1,96 @@
+#dialog .MuiDialog-container .MuiPaper-root{
+    min-width: 80%;
+    max-width: 90%;
+    width: auto;
+    padding: 15px;
+}
+#dialog .MuiDialog-container .MuiPaper-root .header,
+#dialog .MuiDialog-container .MuiPaper-root .contact_form{
+    width: 100%;
+}
+#dialog .MuiDialog-container .MuiPaper-root .header h3{
+    font-size: 30px;
+    color: #000;
+}
+/* #dialog .MuiDialog-container .MuiPaper-root .contact_form{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+} */
+#dialog .MuiDialog-container .MuiPaper-root .contact_form .input_div{
+    margin: 10px;
+    padding: 5px;
+    width: 40%;
+}
+#dialog .MuiDialog-container .MuiPaper-root .contact_form .input_div h5{
+    font-size: 20px;
+    color: #000;
+    margin: 5px 0;
+}
+#dialog .MuiDialog-container .MuiPaper-root .contact_form .input_div .MuiFormControl-root{
+    width: 100%;
+}
+#dialog .MuiDialog-container .MuiPaper-root .contact_form .input_div .MuiFormControl-root .MuiOutlinedInput-root{
+    width: 100%;
+}
+#dialog .MuiDialog-container .MuiPaper-root .contact_form .input_div .MuiFormControl-root .MuiOutlinedInput-root input{
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 25px;
+}
+#dialog .MuiDialog-container .MuiPaper-root .buttons{
+    margin: 10px auto;
+}
+#dialog .MuiDialog-container .MuiPaper-root .buttons button{
+    background: linear-gradient(45deg, #e74c3c, #e67e22, #f39c12);
+    color: #fff;
+    margin: 10px;
+}
+#alert .MuiDialog-container .MuiPaper-root{
+    padding: 20px;
+    max-width: 50%;
+    min-width: 20%;
+    width: auto;
+    height: auto;
+}
+#alert .MuiDialog-container .MuiPaper-root p{
+    font-size: 25px;
+    margin: 10px;
+    text-align: left;
+}
+#alert .MuiDialog-container .MuiPaper-root button{
+    font-size: 20px;
+    padding: 10px;
+    color: #000;
+    border-radius: 10px;
+    width: 80px;
+    margin-left: auto;
+    background: #fff;
+    border: none;
+}
+#alert .MuiDialog-container .MuiPaper-root button:hover{
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+@media screen and (max-width: 768px){
+    #dialog .MuiDialog-container .MuiPaper-root .contact_form .input_div{
+        margin: 10px;
+        padding: 5px;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 576px){
+    #dialog .MuiDialog-container .MuiPaper-root .header h3{
+        font-size: 25px;
+    }
+    #dialog .MuiDialog-container .MuiPaper-root .contact_form .input_div h5{
+        font-size: 16px;
+    }
+    #dialog .MuiDialog-container .MuiPaper-root .contact_form .input_div .MuiFormControl-root .MuiOutlinedInput-root input{
+        font-size: 20px;
+    }
+    #alert .MuiDialog-container .MuiPaper-root{
+        max-width: 100%;
+    }
+}

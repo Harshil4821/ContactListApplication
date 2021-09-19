@@ -64,7 +64,7 @@
 }
 @media screen and (max-width: 576px){
     .home_right{
-        min-height: 100vh;
+        min-height: 120vh;
         height: auto;
     }
     .home_right .box_right{

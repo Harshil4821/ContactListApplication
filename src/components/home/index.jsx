@@ -7,10 +7,16 @@ import ContactList from '../../static data/list.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import HomeRight from '../home right/index';
+import AddContact from '../add contact/index';
 
-const HomeLeft = (props)=>{
+const HomeLeft = ()=>{
     const [text_search, setSearchText] = useState(null);
     const [SearchArray, setSearchArray] = useState([]);
+    const [user_detail, setUserDetail] = useState(null);
+    const [add_contact_flag, setAddContactFlag] = useState(false);
+    console.log(add_contact_flag);
+
+
     const ChangeTextSearch = (e)=>{
         if(e.target.value === ""){
             setSearchArray([]);
@@ -33,11 +39,19 @@ const HomeLeft = (props)=>{
         })
         setSearchText(e.target.value)
     }
-    const [user_detail, setUserDetail] = useState(null);
     console.log(ContactList, SearchArray);
+
+    const ChangeAddContactFlag = ()=>{
+        setAddContactFlag(true)
+    }
+
+
     
     return (
         <>
+            {add_contact_flag && <AddContact open={add_contact_flag} close={()=>{
+                setAddContactFlag(false);
+            }} />}
             <div className="d-flex flex-row flex-wrap main_list">
                 <div className="home_left">
                     <div className="header">
@@ -66,7 +80,7 @@ const HomeLeft = (props)=>{
                             </InputAdornment>
                             }
                         />
-                        <Button className="add_contact_button">+ Add Contact</Button>
+                        <Button onClick={ChangeAddContactFlag} className="add_contact_button">+ Add Contact</Button>
                     </div>
                     <div className="contact_list">
                         <div className="box">

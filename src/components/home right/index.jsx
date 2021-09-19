@@ -3,12 +3,22 @@ import './style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import {Typography, FilledInput, InputAdornment, IconButton, Button} from '@mui/material';
+import EditContact from '../edit contact/index';
 
 const HomeRight = (props)=>{
     console.log("props",props);
     let value = props?.user_detail;
+    const [edit_contact_flag, setEditContactFlag] = React.useState(false);
+    const ChangeEditContactFlag = ()=>{
+        alert("hel")
+        setEditContactFlag(true);
+        alert("hello");
+    }
     return (
         <>
+            {edit_contact_flag && <EditContact open={true} close={()=>{
+                setEditContactFlag(false)
+            }} user_detail={value} />}
             <div className="home_right">
                 <div className="box_right">
                     <div className="header">
@@ -61,6 +71,11 @@ const HomeRight = (props)=>{
                                 <Typography className="address_value" variant="h4">{value.address !== "" ? value.address : "No Information Provided"}</Typography>
                             </div>
                         </div>
+                    </div>
+                    <div className="edit_content">
+                        <Button onClick={()=>{
+                            ChangeEditContactFlag()
+                        }} style={{background: 'linear-gradient(45deg, #e74c3c, #e67e22, #f39c12)', color: '#fff'}}>Edit</Button>
                     </div>
                 </div>
             </div>
